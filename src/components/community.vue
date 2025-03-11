@@ -11,8 +11,8 @@ const props = defineProps({
 
 const community = computed(() => [
     {
-        name: 'SITCON 2024 學生計算機年會',
-        nameEn: 'SITCON 2024',
+        name: 'SITCON 2025 學生計算機年會',
+        nameEn: 'SITCON 2025',
         type: '行政組副組長',
         typeEn: 'Deputy Director of the administrative group',
         // issuer: '12',
@@ -20,7 +20,7 @@ const community = computed(() => [
         date: '2024'
     },
     {
-        name: 'SITCON 2023 學生計算機年會',
+        name: 'SITCON 2024 學生計算機年會',
         nameEn: 'SITCON',
         type: '場務組組員',
         typeEn: '場務組組員',
@@ -38,11 +38,12 @@ const title = computed(() => props.lang === 'zh-tw' ? '社群參與' : ' Communi
     <section class="mb-12">
         <h2 class="text-2xl font-bold mb-8 text-white">{{ title }}</h2>
         <div class="space-y-8">
-            <div v-for="cert in  community" :key="cert.name" class="group relative pl-8">
+            <div v-for="cert in community" :key="cert.name" class="group relative pl-8">
                 <!-- 時間軸裝飾 -->
                 <div class="absolute left-0 top-0 h-full w-px bg-gray-700 group-hover:bg-blue-500 transition-colors duration-300"
-                    :class="{ 'h-3/4': cert ===  community[ community.length - 1] }"></div>
-                <div class="absolute left-0 top-2 w-3 h-3 rounded-full border-2 border-gray-700 bg-gray-900 -translate-x-[6px] group-hover:border-blue-500 group-hover:bg-blue-900 transition-colors duration-300">
+                    :class="{ 'h-3/4': cert === community[community.length - 1] }"></div>
+                <div
+                    class="absolute left-0 top-2 w-3 h-3 rounded-full border-2 border-gray-700 bg-gray-900 -translate-x-[6px] group-hover:border-blue-500 group-hover:bg-blue-900 transition-colors duration-300">
                 </div>
 
                 <div class="Community-card">
